@@ -1,4 +1,16 @@
 RottenMangoes::Application.routes.draw do
+resources :movies
+
+# resources :movies
+
+
+  # get "movies/index"
+  # get "movies/show"
+  # get "movies/new"
+  # get "movies/edit"
+  # post "movies/create"
+
+   # match "movies", to: "movies#index", as: "new_movie", via: :get 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
