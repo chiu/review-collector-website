@@ -1,4 +1,8 @@
 class Movie < ActiveRecord::Base
+
+  has_many :reviews
+
+
   validates :title,
   presence: true
 
@@ -23,7 +27,7 @@ class Movie < ActiveRecord::Base
 
   def release_date_is_in_the_future
     if release_date.present?
-       errors.add(:release_date, "should probably be in future.") if release_date < Date.today
-    end
-  end
+     errors.add(:release_date, "should probably be in future.") if release_date < Date.today
+   end
+ end
 end
