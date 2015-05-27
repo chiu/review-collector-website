@@ -24,10 +24,11 @@
 
 <h3> REviews of <em> <%= @movie.title %> </em> </h3>
 <% if current_user %>
+<p>movie average: <%= @movie.review_average %>/10</p>
 <% @movie.reviews.each do |review| %>
 <p><%= review.text %></p>
 <p><%= review.rating_out_of_ten %></p>
-<small>- <%= review.user.email %> </small></br>
+<small>- <%= review.user.full_name %> </small></br>
 
 
 
